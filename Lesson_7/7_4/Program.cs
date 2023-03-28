@@ -41,7 +41,6 @@ void PrintArray(int[,] arr)
 
 int[,] array = MakeArray(x, y, a, b);
 PrintArray(array);
-////////////////////////////////////////////
 
 Console.Write("Введите число для поиска:");
 int n = int.Parse(Console.ReadLine()!);
