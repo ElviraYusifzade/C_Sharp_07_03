@@ -42,7 +42,6 @@ void PrintArray(int[,] arr)
 
 int[,] array = MakeArray(x, y, a, b);
 PrintArray(array);
-////////////////////////////////////////////
 
 int[,] MyFunc(int[,] arr){
 
