@@ -2,41 +2,32 @@
 // Посчитайте, сколько чисел больше 0 ввёл пользователь. 
 
 
-int CountNum()
+Console.Write("Введите количество элементов массива: ");
+int m = int.Parse(Console.ReadLine()!);
+int[] Array = new int[m];
+
+void mas(int m)
 {
-    int count = 0;
-    string word;
-
-    while (true)
+    for (int i = 0; i < m; i++)
     {
-        Console.Write("Output any number: ");
-        word = Console.ReadLine()!;
-
-        if (word == "") return count;
-        else if (int.Parse(word) > 0) count += 1;        
+        Console.Write($" {i+1} число: ");
+        Array[i] = int.Parse(Console.ReadLine()!);
     }
 }
 
-int count = CountNum();
-Console.WriteLine($"Numbers greater than zero: {count}");
-
-
-// ----------------------------------------2 вариант
-
-int Check(int num)
+int kol(int[] Array)
 {
-    int count = 0;
-    
-    for (int i = 1; i <= num; i++)
+    int i=0;
+    int sum = 0;
+
+    while (i < Array.Length)
     {
-        Console.Write($"Число {i}: ");
-        int a = int.Parse(Console.ReadLine()!);
-        if (a > 0) count++;
+        if(Array[i]>0)
+        sum = sum + 1;
+        i = i + 1;
     }
-    return count;
+return sum;
 }
 
-Console.Write("Сколько чисел хотели бы ввести?: ");
-int a = int.Parse(Console.ReadLine()!);
-int result = Check(a);
-Console.WriteLine($"Количество чисел больше 0: {result}");
+mas(m);
+Console.Write($"\n Чисел больше нуля: {kol(Array)} ");
