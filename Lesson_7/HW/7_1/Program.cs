@@ -20,7 +20,9 @@ for (int i = 0; i < arr.GetLength(0); i++)
     }
 Console.WriteLine();
 }
+
     if (pos1 < 0 | pos1 > arr.GetLength(0) - 1 | pos2 < 0 | pos2 > arr.GetLength(1) - 1)
+
 {
     Console.WriteLine("Элемент не существует  ");
 }
